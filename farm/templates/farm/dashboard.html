@@ -14,10 +14,10 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
         <div class="container">
-            <a class="navbar-brand" href="#">Smart Livestock</a>
+            <a class="navbar-brand" href="{% url 'dashboard' %}">Smart Livestock</a>
             <div class="navbar-nav ms-auto">
-                <a class="nav-link active" href="#">Dashboard</a>
-                <a class="nav-link" href="#">Add Animal</a>
+                <a class="nav-link active" href="{% url 'dashboard' %}">Dashboard</a>
+                <a class="nav-link" href="{% url 'add_animal' %}">Add Animal</a>
                 <a class="nav-link" href="#">Reports</a>
             </div>
         </div>
@@ -27,7 +27,6 @@
         <div class="container">
             <h1>Welcome to Smart Farm Manager</h1>
             <p>Manage your Cows, Hens, and Goats efficiently.</p>
-            
             </div>
     </div>
 
@@ -38,7 +37,7 @@
                 <div class="card shadow-sm h-100 p-3">
                     <div class="card-body">
                         <h4 class="card-title text-primary">Cow Management</h4>
-                        <p>Total Cows: 12</p>
+                        <p class="h5">Total Cows: {{ total_cows }}</p>
                         <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
                     </div>
                 </div>
@@ -48,7 +47,7 @@
                 <div class="card shadow-sm h-100 p-3">
                     <div class="card-body">
                         <h4 class="card-title text-danger">Hen Management</h4>
-                        <p>Total Hens: 150</p>
+                        <p class="h5">Total Hens: {{ total_hens }}</p>
                         <a href="#" class="btn btn-outline-danger btn-sm">View Details</a>
                     </div>
                 </div>
@@ -58,7 +57,7 @@
                 <div class="card shadow-sm h-100 p-3">
                     <div class="card-body">
                         <h4 class="card-title text-success">Goat Management</h4>
-                        <p>Total Goats: 25</p>
+                        <p class="h5">Total Goats: {{ total_goats }}</p>
                         <a href="#" class="btn btn-outline-success btn-sm">View Details</a>
                     </div>
                 </div>
